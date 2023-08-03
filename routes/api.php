@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/contact', [ContactController::class, 'sendContactForm']);
+Route::post('/', [ContactController::class, 'sendContactForm']);
