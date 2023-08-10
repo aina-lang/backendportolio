@@ -13,6 +13,6 @@ use App\Http\Controllers\MailController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::post('/sendmail', [MailController::class, 'sendEmail']);
+// Route::post('/sendmail', [MailController::class, 'sendEmail']);
 
-Route::get("/",[MailController::class,'index']);
+// Route::get("/",[MailController::class,'index']);
