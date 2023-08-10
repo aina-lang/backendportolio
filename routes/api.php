@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,4 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/', [ContactController::class, 'sendContactForm']);
+header("Access-Control-Allow-Origin: https://ainamercia.netlify.app");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+Route::post('/sendmail', [MailController::class, 'sendEmail']);
+
+Route::get("/",[MailController::class,'index']);

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('/sendmail', [MailController::class, 'sendEmail']);
 
-Route::post('/', [ContactController::class, 'sendContactForm']);
+Route::get("/",[MailController::class,'index']);
